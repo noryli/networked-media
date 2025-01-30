@@ -151,16 +151,12 @@
     const header = document.querySelector('.header');
     const footer = document.querySelector('.footer');
     const dynamicContent = document.getElementById("dynamic-content");
-    const youtubeTitle = document.getElementById("youtube-title");
-    const youtubeVideos = document.getElementById("youtube-videos");
 
     header.style.backgroundColor = defaultStyles.headerColor;
     footer.style.backgroundColor = defaultStyles.headerColor;
     footer.style.color = defaultStyles.color;
     dynamicContent.style.display = "none";
-    youtubeTitle.style.display = "none";
-    youtubeVideos.innerHTML = "";
-
+        
     const svgIcons = document.querySelectorAll('.social-icons svg');
     svgIcons.forEach(svg => {
         svg.style.fill = defaultStyles.svgColor; 
