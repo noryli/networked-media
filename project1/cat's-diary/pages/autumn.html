@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky's Diary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style3.css">
+</head>
+<body>
+
+    <nav>
+        <div class="navbar">
+            <div class="nav-left">
+                <button id="catalog-button" class="icon-button">☰ Catalog</button>
+                <div id="dropdown-menu" class="dropdown-content">
+                    <a href="../index.html">Homepage</a>
+                    <a href="./spring.html">Spring</a>
+                    <a href="./summer.html">Summer</a>
+                    <a href="./winter.html">Winter</a>
+                </div>
+            </div>
+            
+            <div class="nav-right">
+                <button id="post-button" class="icon-button">✎ Post</button>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Lucky's Autumn Life</h1>
+        <p class="intro-text">Autumn is Lucky's favorate season!</h2>
+    </header>
+
+    <main>
+        <p>As a cat, I also have my favorite season, that is autumn! You want to know why? Because there are so many fallen leaves in autumn, I enjoy the feeling of stepping on them. The sound of falling leaves will make me feel at ease, and the feeling of stepping on the leaves is also very comfortable. In autumn, I often play hide and seek with Nory. I would hide myself in the leaves, and since we were so similar in color, she often couldn't find me. Every time Nory would praise me, saying I was a clever kitten. I like to roll in the piles of fallen leaves, and I also like to chase the leaves falling in the air. Autumn is really a happy season!</p>
+        
+        <div class="image-placeholder"></div>
+        
+    </main>
+    <div class="prev-page-button">
+        <button class="prev-page-btn" onclick="history.back()">Go to Previous Page</button>
+    </div>
+
+    <div class="next-page-button">
+        <button class="next-page-btn" onclick="location.href='./winter.html'">Go to Next Page</button>
+    </div>
+
+    <script>
+        const catalogButton = document.getElementById('catalog-button');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        catalogButton.addEventListener('click', () => {
+            if (dropdownMenu.style.display === 'block') {
+                dropdownMenu.style.display = 'none';
+            } else {
+                dropdownMenu.style.display = 'block';
+            }
+        });
+
+        window.addEventListener('click', (e) => {
+            if (!e.target.matches('#catalog-button')) {
+                dropdownMenu.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

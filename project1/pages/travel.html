@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .caption {
+            font-style: italic;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        .back-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #333;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Travel Image Gallery</h1>
+    <p class="caption">"A picture is worth a thousand words."</p>
+    
+    <div class="gallery">
+        <img src="../images/travelA.jpg" alt="Image 1">
+        <img src="../images/travelB.jpg" alt="Image 2">
+        <img src="../images/travelC.jpg" alt="Image 3">
+        <img src="../images/travelD.jpg" alt="Image 4">
+        <img src="../images/travelE.jpg" alt="Image 5">
+        <img src="../images/travelF.jpg" alt="Image 6">
+        <img src="../images/travelJ.jpg" alt="Image 7">
+        <img src="../images/travelH.jpg" alt="Image 8">
+        <img src="../images/travelG.jpg" alt="Image 9">
+    </div>
+    <button class="back-button" onclick="window.location.href='../index.html'">Go Back to Nory's Webpage</button>
+</body>
+</html>

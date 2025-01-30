@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky's Diary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style1.css">
+</head>
+<body>
+
+    <nav>
+        <div class="navbar">
+            <div class="nav-left">
+                <button id="catalog-button" class="icon-button">☰ Catalog</button>
+                <div id="dropdown-menu" class="dropdown-content">
+                    <a href="../index.html">Homepage</a>
+                    <a href="./summer.html">Summer</a>
+                    <a href="./autumn.html">Autumn</a>
+                    <a href="./winter.html">Winter</a>
+                </div>
+            </div>
+            
+            <div class="nav-right">
+                <button id="post-button" class="icon-button">✎ Post</button>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Lucky's Spring Life</h1>
+        <p class="intro-text">Spring makes me feel warm!</h2>
+    </header>
+
+    <main>
+        <p>I'm a little orange cat named Lucky. I am two years old. You want to know what my life is like? Let me take you through my life. My host Nory is a kind and beautiful girl, and unlike other cat hosts, she likes to take me out of the house and let me get in touch with the outside world, rather than keep me in the room all the time. As a result, I've seen more scenery than any other kitten. In spring, she would take me to see the beautiful scenery outside. I liked to run around on the grass and smell the flowers. I really like spring, because the temperature in spring is very suitable for us cats to go out, we don't feel very cold or very hot. Every day after Nory gets up, I will stand at the door hoping that she can take me out to play today. You know what? I have made friends with the little Daisy in the garden!</p>
+        
+        <div class="image-placeholder"></div>
+        
+    </main>
+    <div class="prev-page-button">
+        <button class="prev-page-btn" onclick="history.back()">Go to Previous Page</button>
+    </div>
+
+    <div class="next-page-button">
+        <button class="next-page-btn" onclick="location.href='./summer.html'">Go to Next Page</button>
+    </div>
+    
+    <script>
+        const catalogButton = document.getElementById('catalog-button');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+        catalogButton.addEventListener('click', () => {
+            if (dropdownMenu.style.display === 'block') {
+                dropdownMenu.style.display = 'none';
+            } else {
+                dropdownMenu.style.display = 'block';
+            }
+        });
+
+        window.addEventListener('click', (e) => {
+            if (!e.target.matches('#catalog-button')) {
+                dropdownMenu.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

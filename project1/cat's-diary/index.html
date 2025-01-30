@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky's Diary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="nav-left">
+                <button id="catalog-button" class="icon-button">☰ Catalog</button>
+                <div id="dropdown-menu" class="dropdown-content">
+                    <a href="./pages/spring.html">Spring</a>
+                    <a href="./pages/summer.html">Summer</a>
+                    <a href="./pages/autumn.html">Autumn</a>
+                    <a href="./pages/winter.html">Winter</a>
+                </div>
+            </div>
+            
+            <div class="nav-right">
+                <button id="post-button" class="icon-button">✎ Post</button>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Lucky's Diary</h1>
+        <p class="intro-text">Hi, I'm Nory, and I'm a cat person. I want to share my cat's daily life with you from the first perspective of my cat Lucky!</p>
+        <h2>Welcome to the World of me and my cat Lucky!</h2>
+    </header>
+
+    <main>
+        <p>For me, my most important companion is Lucky, the cat I have had for two years. Most cat hosts don't take their cats outside, but my hobby is to take Lucky for a walk every day. When Lucky played in the park, I would listen to music or read books quietly. I really enjoyed the process and Lucky also had a lot of different experiences than other kittens. She used to roll in the grass, chase butterflies in the garden, hide in the leaves and play hide-and-seek with me, and run through the snow. I always wondered, do cats have thoughts and feelings like humans? In my spare time, I always like to use the cat's first perspective to record some interesting things happened between me and her. I want to create a website for Lucky so that more people can see the story of what happened between me and my cat. I divided the website into four sections: spring, summer, autumn and winter. Each section records a different story of Lucky. I'd like to share my life with my cat, as well as some information about cats for some cat lovers below.</p>
+        
+        <div class="image-placeholder"></div>
+
+    </main>
+
+    <div class="next-page-button">
+        <button class="next-page-btn" onclick="location.href='./pages/spring.html'">Go to Next Page</button>
+    </div>
+
+    <div class="prev-page-button">
+        <button class="prev-page-btn" onclick="window.location.href='../index.html'">Go Back to Nory's Page</button>
+    </div>
+
+    <script>
+        const catalogButton = document.getElementById('catalog-button');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        catalogButton.addEventListener('click', () => {
+            if (dropdownMenu.style.display === 'block') {
+                dropdownMenu.style.display = 'none';
+            } else {
+                dropdownMenu.style.display = 'block';
+            }
+        });
+
+        window.addEventListener('click', (e) => {
+            if (!e.target.matches('#catalog-button')) {
+                dropdownMenu.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

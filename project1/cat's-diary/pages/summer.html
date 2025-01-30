@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky's Diary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style2.css">
+</head>
+<body>
+
+    <nav>
+        <div class="navbar">
+            <div class="nav-left">
+                <button id="catalog-button" class="icon-button">☰ Catalog</button>
+                <div id="dropdown-menu" class="dropdown-content">
+                    <a href="../index.html">Homepage</a>
+                    <a href="./spring.html">Spring</a>
+                    <a href="./autumn.html">Autumn</a>
+                    <a href="./winter.html">Winter</a>
+                </div>
+            </div>
+            
+            <div class="nav-right">
+
+                <button id="post-button" class="icon-button">✎ Post</button>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Lucky's Summer Life</h1>
+        <p class="intro-text">Do you want to know cat's summer life?</h2>
+    </header>
+
+    <main>
+        <p>Let me continue to take you closer to my summer life! It's always hot in the summer, and unlike humans, I don't sweat, and the only place on my body where I can lose heat is my PAWS. So in the summer, I like to step in places where the temperature is very low. There is always a lot of dew on the grass in the early morning in summer, and I like to run around on the grass at this time. In summer, unlike in spring, plants grow more luxuriously, and there are often insects in the grass. My daily pastime is to catch little bugs in the grass and bring them to Nory. I want Nory to tell me I'm capable, but for some reason, she gets scared every time.</p>
+        
+        <div class="image-placeholder"></div>
+        
+    </main>
+
+    <div class="prev-page-button">
+        <button class="prev-page-btn" onclick="history.back()">Go to Previous Page</button>
+    </div>
+
+    <div class="next-page-button">
+        <button class="next-page-btn" onclick="location.href='./autumn.html'">Go to Next Page</button>
+    </div>
+
+    <script>
+        const catalogButton = document.getElementById('catalog-button');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        catalogButton.addEventListener('click', () => {
+            if (dropdownMenu.style.display === 'block') {
+                dropdownMenu.style.display = 'none';
+            } else {
+                dropdownMenu.style.display = 'block';
+            }
+        });
+
+        window.addEventListener('click', (e) => {
+            if (!e.target.matches('#catalog-button')) {
+                dropdownMenu.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

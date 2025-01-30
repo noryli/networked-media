@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky's Diary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style4.css">
+</head>
+<body>
+
+    <nav>
+        <div class="navbar">
+            <div class="nav-left">
+                <button id="catalog-button" class="icon-button">☰ Catalog</button>
+                <div id="dropdown-menu" class="dropdown-content">
+                    <a href="../index.html">Homepage</a>
+                    <a href="./spring.html">Spring</a>
+                    <a href="./summer.html">Summer</a>
+                    <a href="./autumn.html">Autumn</a>
+                </div>
+            </div>
+            
+            <div class="nav-right">
+                <button id="post-button" class="icon-button">✎ Post</button>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Lucky's Winter Life</h1>
+        <p class="intro-text">I Love Winter!</h2>
+    </header>
+
+    <main>
+        <p>One of the things that excites me the most about winter is the snow! Every time it snows, I can’t help but try to catch the snowflakes falling from the sky. Even though they melt quickly on my paws, I still find chasing them to be so much fun. Sometimes, the snow piles up thickly, and I love hopping around in it, leaving tiny paw prints behind. Nory and I play in the snow together, and sometimes she rolls snowballs towards me to make me chase them. One of my favorite things to do is hide behind snow mounds, waiting for her to come find me.
+
+        </p>
+        
+        <div class="image-placeholder"></div>
+        
+    </main>
+    <div class="prev-page-button">
+        <button class="prev-page-btn" onclick="history.back()">Go to Previous Page</button>
+    </div>
+
+    <script>
+        const catalogButton = document.getElementById('catalog-button');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        catalogButton.addEventListener('click', () => {
+            if (dropdownMenu.style.display === 'block') {
+                dropdownMenu.style.display = 'none';
+            } else {
+                dropdownMenu.style.display = 'block';
+            }
+        });
+
+        window.addEventListener('click', (e) => {
+            if (!e.target.matches('#catalog-button')) {
+                dropdownMenu.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
