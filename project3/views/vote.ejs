@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vote for the Best Outfit</title>
+    <link rel="stylesheet" href="/css/vote.css">
+</head>
+<body>
+
+    <!-- Back to Home Button -->
+    <a href="/home" class="back-home">⬅</a>
+
+    <!-- Theme Title -->
+    <h1 class="theme-title">Today's Theme: <%= todayTheme %></h1>
+
+    <% if (!voteLimitReached) { %>
+        <!-- Vote Container -->
+        <div class="vote-container">
+            <!-- Left Side (Cat 1) -->
+            <form action="/vote/<%= cat1.id %>" method="post" class="left-half">
+                <input type="hidden" name="vote" value="<%= cat1.id %>">
+                <p class="pick-me"><%= cat1.description %></p>
+                <img src="<%= cat1.image %>" class="cat-image">
+            </form>
+
+            <!-- Right Side (Cat 2) -->
+            <form action="/vote/<%= cat2.id %>" method="post" class="right-half">
+                <input type="hidden" name="vote" value="<%= cat2.id %>">
+                <p class="pick-me"><%= cat2.description %></p>
+                <img src="<%= cat2.image %>" class="cat-image">
+            </form>
+        </div>
+    <% } %>
+
+    <!-- Vote Limit Reached Modal -->
+    <div id="voteLimitModal" class="modal">
+        <div class="modal-content">
+            <p>Today's voting limit reached. Come back tomorrow!</p>
+            <button onclick="closeModal()">OK</button>
+        </div>
+    </div>
+
+    <script>
+        function closeModal() {
+            document.getElementById("voteLimitModal").style.display = "none";
+        }
+
+        // Show modal if vote limit is reached
+        <% if (voteLimitReached) { %>
+            document.addEventListener("DOMContentLoaded", function() {
+                document.getElementById("voteLimitModal").style.display = "flex";
+            });
+        <% } %>
+    </script>
+
+</body>
+</html>
