@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:wght@400;700&display=swap');
+
+/* Full-page background image */
+body {
+    background: url('/images/background1.jpg') no-repeat center center/cover;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Afacad', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Title (Top Left Corner) */
+.landing-title {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-size: 4em;
+    font-weight: bold;
+    color: #333;  
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Intro Section */
+.landing-intro {
+    position: absolute;
+    left: 30px;
+    top: 20%;
+    max-width: 700px;
+    font-size: 1.2em;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* Enter Button */
+.enter-btn {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    background-color: black;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.enter-btn:hover {
+    background-color: #ff3d3d;
+    transform: scale(1.1);
+}

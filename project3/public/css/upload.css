@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:wght@400;700&display=swap');
+
+/* General Styles */
+body {
+    background: url('/images/background3.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    text-align: center;
+    font-family: 'Afacad', sans-serif;
+    margin: 0;
+    padding: 20px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Back to Home Arrow */
+.back-home {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 3em;
+    color: #5E3E58;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.back-home:hover {
+    color: #ff6b6b;
+}
+
+/* Upload Form Container */
+.upload-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%;
+}
+
+/* Upload Title */
+.upload-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #5E3E58;
+    margin-bottom: 20px;
+}
+
+/* Form Fields */
+input[type="text"], 
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Submit Button */
+.upload-btn {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.upload-btn:hover {
+    background-color: #ff3d3d;
+}
