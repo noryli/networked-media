@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:wght@400;700&display=swap');
+
+/* General Styles */
+body {
+    background: url('/images/background2.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    text-align: center;
+    font-family: 'Afacad', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Hall of Fame Title */
+.hall-of-fame {
+    font-size: 3em; 
+    font-weight: bold;
+    color: #5E3E58;
+    margin-bottom: 50px;
+}
+
+/* Podium Container */
+.podium {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 30px;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+/* Podium Stand (Scaled Up) */
+.podium-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 160px; 
+    padding: 15px;
+    background-color: #ffd700; 
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Positioning for 1st, 2nd, and 3rd place */
+.first-place {
+    height: 230px;
+    order: 1; 
+}
+
+.second-place {
+    height: 180px;
+    order: 0;
+    background-color: #c0c0c0; 
+}
+
+.third-place {
+    height: 180px; 
+    order: 2;
+    background-color: #cd7f32; 
+}
+
+/* Circular Cat Image */
+.cat-image {
+    width: 140px; 
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid white;
+    margin-bottom: 15px;
+}
+
+/* Cat Name */
+.cat-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Podium Rank Number */
+.rank {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    color: black;
+    font-size: 1.8em;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.second-place .rank, 
+.third-place .rank {
+    top: -80px; 
+}
+
+/* Outfit Theme Section */
+.theme-section {
+    font-size: 2em; 
+    font-weight: bold;
+    color: #5E3E58;
+    margin-bottom: 40px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    border-radius: 8px;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Buttons */
+.action-btn {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 18px 35px;
+    font-size: 1.5em;
+    text-decoration: none;
+    border-radius: 12px;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+}
+
+.action-btn:hover {
+    background-color: #ff3d3d;
+}
