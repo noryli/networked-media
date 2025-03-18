@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1742318767684,
+    "name": "Lucky",
+    "description": "Vote for me please!",
+    "image": "/uploads/1742318767677.png",
+    "likes": 5
+  },
+  {
+    "id": 1742318790690,
+    "name": "Lulu",
+    "description": "Lulu is the best!",
+    "image": "/uploads/1742318790683.png",
+    "likes": 2
+  },
+  {
+    "id": 1742318820696,
+    "name": "Charlie",
+    "description": "I'm your sweetheart!",
+    "image": "/uploads/1742318820691.png",
+    "likes": 7
+  },
+  {
+    "id": 1742318870098,
+    "name": "Sunny",
+    "description": "Sunny with white dress~",
+    "image": "/uploads/1742318870093.png",
+    "likes": 1
+  },
+  {
+    "id": 1742318942987,
+    "name": "Tom",
+    "description": "I'm a lovely rabbit~",
+    "image": "/uploads/1742318942984.png",
+    "likes": 1
+  },
+  {
+    "id": 1742318963283,
+    "name": "Coco",
+    "description": "Trick or treat~",
+    "image": "/uploads/1742318963279.png",
+    "likes": 0
+  },
+  {
+    "id": 1742318990605,
+    "name": "Mark",
+    "description": "What can I do for you~",
+    "image": "/uploads/1742318990602.png",
+    "likes": 2
+  }
+]
