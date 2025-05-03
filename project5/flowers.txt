@@ -1,0 +1,3 @@
+{"title":"1st secret","description":"sdnjfnadfnkakl","petalCount":13,"petalColor":"#ffffff","centerColor":"#ffff00","shape":"round","imagePath":"/uploads/42c2b1525a85e5db8e935797526f3234","ownerUsername":"noryyy","timestamp":1746315123404,"_id":"ZA5lLmjfQiHIlvvP"}
+{"$$deleted":true,"_id":"ZA5lLmjfQiHIlvvP"}
+{"title":"dfd","description":"gdsfg","petalCount":8,"petalColor":"#ff69b4","centerColor":"#ffff00","shape":"round","imagePath":null,"ownerUsername":"noryyy","timestamp":1746315267863,"_id":"FjHmDgHvHnh3vY45"}

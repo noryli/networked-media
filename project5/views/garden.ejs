@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Secret Garden</title>
+  <!-- load p5.js so we can draw the flowers -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <link rel="stylesheet" href="/css/garden.css">
+  <script src="/js/garden.js" defer></script>
+</head>
+<body>
+  <h1 class="page-title">My Garden</h1>
+  <!-- back button that takes user back to home page -->
+  <div id="header">
+    <svg onclick="window.location.href = '/'" viewBox="0 0 1024 1024" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.12 504.32c2.048-13.312 8.704-26.112 18.944-34.816l390.144-390.144c23.552-19.968 58.88-17.408 79.36 6.144 17.92 20.992 17.92 52.224 0 73.216L196.096 456.192h763.904c31.232 0 56.32 25.088 56.32 56.32s-25.088 56.32-56.32 56.32H196.096l297.472 297.472c22.016 22.016 22.016 57.344 0.512 79.36-22.016 22.016-57.344 22.016-79.36 0.512L20.48 552.448c-12.288-12.8-17.92-30.72-15.36-48.128z"/>
+    </svg>
+  </div>
+
+  <div id="sketch-wrapper">
+    <div id="sketch-holder"></div>
+    <!-- Tooltip that shows flower title on hover -->
+    <div id="tooltip" class="tooltip"></div>
+  </div>
+  <!-- Button to plant a new flower (the big + button in corner) -->
+  <a class="plant-button" href="/create" onmouseover="showPlantTooltip(event)" onmouseout="hideTooltip()">
+    <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" pointer-events="none">
+      <!-- This is just a big plus svg icon I found online -->
+      <path d="M925.696 384q19.456 0 37.376 7.68t30.72 20.48 20.48 30.72 7.68 37.376q0 20.48-7.68 37.888t-20.48 30.208-30.72 20.48-37.376 7.68l-287.744 0 0 287.744q0 20.48-7.68 37.888t-20.48 30.208-30.72 20.48-37.376 7.68q-20.48 0-37.888-7.68t-30.208-20.48-20.48-30.208-7.68-37.888l0-287.744-287.744 0q-20.48 0-37.888-7.68t-30.208-20.48-20.48-30.208-7.68-37.888q0-19.456 7.68-37.376t20.48-30.72 30.208-20.48 37.888-7.68l287.744 0 0-287.744q0-19.456 7.68-37.376t20.48-30.72 30.208-20.48 37.888-7.68q39.936 0 68.096 28.16t28.16 68.096l0 287.744 287.744 0z"/>
+    </svg>
+  </a>
+  <!-- Left arrow for going to the previous page of flowers -->
+  <div id="prev-arrow" style="position: absolute; top: 50%; left: 20px; transform: translateY(-50%); cursor: pointer; z-index: 10;" onclick="prevPage()">
+    <svg viewBox="0 0 1024 1024" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+      <path fill="black" d="M609.6 832 352 512l257.6-320L704 256l-192 256 192 256z"/>
+    </svg>
+  </div>
+  <!-- Right arrow for going to the next page of flowers -->
+  <div id="next-arrow" style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer; z-index: 10;" onclick="nextPage()">
+    <svg viewBox="0 0 1024 1024" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+      <path fill="black" d="M414.4 192 672 512l-257.6 320L320 768l192-256L320 256z"/>
+    </svg>
+  </div>
+
+  <!-- Pass the flower data from server to frontend -->
+  <script>
+    const flowers = <%- JSON.stringify(flowers) %>;
+  </script>
+</body>
+</html>

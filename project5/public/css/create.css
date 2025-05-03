@@ -1,0 +1,64 @@
+/* base page style */
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-image: url('/images/background8.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+  }
+  /* top left corner: back button */
+  #header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  #header svg {
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  #header svg:hover {
+    opacity: 0.6;
+  }
+  /* canvas holder */
+  #sketch-holder {
+    margin-top: 80px;
+  }
+  /* form styling */
+  form {
+    margin-top: 30px;
+    display: inline-block;
+    text-align: left;
+  }
+  label {
+    display: block;
+    margin-top: 15px;
+  }
+  input[type='text'], textarea, input[type='file'] {
+    width: 100%;
+    margin-top: 5px;
+  }
+  /* button styling */
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color:aliceblue;
+    background-color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #656565;
+  }
+  /* page Title */
+    .page-title {
+    font-family: Zapfino, cursive;
+    font-size: 36px;
+    color: black;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }

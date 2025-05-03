@@ -1,0 +1,120 @@
+/* set up the entire page layout */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;                
+  overflow: hidden;            
+  background-image: url('/images/background8.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* top-left back arrow container */
+#header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;                
+}
+
+/* hover animation */
+#header svg {
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+#header svg:hover {
+  opacity: 0.6;
+}
+
+/* canvas container (left side) */
+#sketch-holder {
+  flex: 1;                   
+  display: flex;
+  align-items: center;       
+  justify-content: center;      
+}
+
+/* make canvas background transparent */
+canvas {
+  background: transparent !important;
+}
+
+/* right panel for flower info */
+#info-panel {
+  flex: 1;                             
+  backdrop-filter: blur(16px);        
+  background-color: rgba(255, 255, 255, 0.4); 
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;              
+  max-height: 100vh;
+}
+
+/* flower title styling */
+#info-panel h1 {
+  margin-top: 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* paragraph text styling */
+#info-panel p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* style for uploaded flower image */
+.flower-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  margin-top: 20px;
+}
+
+/* delete button style */
+.delete-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.delete-button:hover {
+  background-color: #e60000;
+}
+
+/* edit button style (link) */
+.edit-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #6ecb63;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.edit-button:hover {
+  background-color: #51a84b;
+}
+
+/* layout for edit + delete buttons */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+/* optional flower history list */
+ul.plant-history {
+  padding-left: 20px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}

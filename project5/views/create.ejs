@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= flower ? 'Edit Your Flower' : 'Create Your Flower' %></title>
+  <!-- load p5.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <link rel="stylesheet" href="/css/create.css">
+  <script src="/js/create.js" defer></script>
+</head>
+<!-- pass initial flower data through data -->
+<body 
+  data-petal-count="<%= flower ? flower.petalCount : 8 %>"
+  data-petal-color="<%= flower ? flower.petalColor : '#ff69b4' %>"
+  data-center-color="<%= flower ? flower.centerColor : '#ffff00' %>"
+  data-shape="<%= flower ? flower.shape : 'round' %>"
+>
+
+<!-- back button-->
+<div id="header">
+  <!-- I downloaded all the svg data from internet -->
+  <svg onclick="window.location.href = '/garden'" viewBox="0 0 1024 1024" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5.12 504.32c2.048-13.312 8.704-26.112 18.944-34.816l390.144-390.144c23.552-19.968 58.88-17.408 79.36 6.144 17.92 20.992 17.92 52.224 0 73.216L196.096 456.192h763.904c31.232 0 56.32 25.088 56.32 56.32s-25.088 56.32-56.32 56.32H196.096l297.472 297.472c22.016 22.016 22.016 57.344 0.512 79.36-22.016 22.016-57.344 22.016-79.36 0.512L20.48 552.448c-12.288-12.8-17.92-30.72-15.36-48.128z"/>
+  </svg>
+</div>
+
+<!-- title changes depending on whether user is editing or creating -->
+<h1 class="page-title"><%= flower ? 'Edit Your Flower' : 'Create Your Flower' %></h1>
+
+<!-- p5 sketch will render inside this container -->
+<div id="sketch-holder"></div>
+
+
+<!-- form to create or edit flower -->
+<form id="saveForm" method="POST" action="/saveFlower" enctype="multipart/form-data">
+  <% if (flower) { %>
+    <input type="hidden" name="id" value="<%= flower._id %>">
+  <% } %>
+
+  <!-- flower title input -->
+  <label>Flower Title:
+    <input type="text" name="title" required value="<%= flower ? flower.title : '' %>">
+  </label>
+
+  <!-- description input -->
+  <label>Flower Description:
+    <textarea name="description" rows="3" required><%= flower ? flower.description : '' %></textarea>
+  </label>
+
+  <!-- image upload input (optional) -->
+  <label>Upload a Picture:
+    <input type="file" name="flowerImage" accept="image/*">
+  </label>
+
+  <hr>
+
+  <!-- controls for customizing flower appearance -->
+  <label>Petal Count:
+    <input type="range" id="petalSlider" min="3" max="20" value="<%= flower ? flower.petalCount : 8 %>">
+    <span id="petalCountDisplay"><%= flower ? flower.petalCount : 8 %></span>
+  </label>
+
+  <label>Petal Color:
+    <input type="color" id="petalColorPicker" value="<%= flower ? flower.petalColor : '#ff69b4' %>">
+  </label>
+
+  <label>Center Color:
+    <input type="color" id="centerColorPicker" value="<%= flower ? flower.centerColor : '#ffff00' %>">
+  </label>
+
+  <label>Petal Shape:
+    <select id="shapeSelector">
+      <option value="round" <%= flower && flower.shape === 'round' ? 'selected' : '' %>>Round</option>
+      <option value="square" <%= flower && flower.shape === 'square' ? 'selected' : '' %>>Square</option>
+      <option value="sharp" <%= flower && flower.shape === 'sharp' ? 'selected' : '' %>>Sharp</option>
+    </select>
+  </label>
+  <!-- hidden fields to store visual properties -->
+  <input type="hidden" id="petalCount" name="petalCount">
+  <input type="hidden" id="petalColor" name="petalColor">
+  <input type="hidden" id="centerColor" name="centerColor">
+  <input type="hidden" id="shape" name="shape">
+
+  <!-- submit button -->
+  <button type="submit"><%= flower ? 'Update This Flower' : 'Plant This Flower!' %></button>
+</form>
+
+</body>
+</html>

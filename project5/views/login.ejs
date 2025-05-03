@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Secret Garden</title>
+  <link rel="stylesheet" href="/css/login.css">
+
+</head>
+<body>
+
+  <!-- back button svg -->
+  <div id="header">
+    <svg onclick="window.location.href = '/'" style="cursor: pointer; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.6" onmouseout="this.style.opacity=1" viewBox="0 0 1024 1024" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.12 504.32c2.048-13.312 8.704-26.112 18.944-34.816l390.144-390.144c23.552-19.968 58.88-17.408 79.36 6.144 17.92 20.992 17.92 52.224 0 73.216L196.096 456.192h763.904c31.232 0 56.32 25.088 56.32 56.32s-25.088 56.32-56.32 56.32H196.096l297.472 297.472c22.016 22.016 22.016 57.344 0.512 79.36-22.016 22.016-57.344 22.016-79.36 0.512L20.48 552.448c-12.288-12.8-17.92-30.72-15.36-48.128z"/>
+    </svg>
+  </div>
+  <!--  login container -->
+  <div class="login-container">
+    <h2>Login</h2>
+    <form method="POST" action="/login">
+      <input type="text" name="username" placeholder="Username" required><br>
+      <input type="password" name="password" placeholder="Password" required><br>
+      <button type="submit">Login</button>
+    </form>
+    <a href="/signup">Don't have an account? Sign up</a>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+/* base layout styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('/images/background4.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  position: relative;
+}
+
+/* back button */
+#header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+/* style for the back link button */
+#header a {
+  text-decoration: none;
+  background-color: black;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+}
+#header a:hover {
+  background-color: #656565;
+}
+
+/* signup box container */
+.signup-container {
+  background-color: rgba(255, 255, 255, 0.85); 
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  max-width: 90%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+/* input fields for username and password */
+input[type="text"],
+input[type="password"] {
+  width: 100%;            
+  margin: 10px auto;     
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  display: block;          
+  box-sizing: border-box;  
+}
+
+/* submit button */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #565656;
+}
+
+/* login link */
+a {
+  display: block;
+  margin-top: 15px;
+  text-decoration: none;
+  color: #2049af;
+}
+a:hover {
+  text-decoration: underline;
+}

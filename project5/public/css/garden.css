@@ -1,0 +1,112 @@
+/* base layout style */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f8ff;
+    overflow: hidden;
+  }
+
+  /* back arrow button */
+  #header {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    z-index: 10;
+  }
+  #header svg {
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  #header svg:hover {
+    opacity: 0.6;
+  }
+
+  /* background and Canvas Container */
+  #sketch-wrapper {
+    flex: 1;
+    background-image: url('/images/background8.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #sketch-holder {
+    z-index: 1;
+  }
+
+  /* tooltip  */
+  .tooltip {
+    position: absolute;
+    background: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    display: none;
+    z-index: 20;
+  }
+
+  /* plant button (big circle + plus icon) */
+  .plant-button {
+    position: absolute;
+    bottom: 50px;
+    right: 40px;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  .plant-button:hover {
+    background-color: #525252;
+  }
+  .plant-button svg {
+    width: 50px;
+    height: 50px;
+    fill: white;
+  }
+
+  /* page title (top centered) */
+  .page-title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: Zapfino, cursive;
+    font-size: 30px;
+    color: black;
+    z-index: 15;
+  }
+
+  /* left & right page arrows */
+  .page-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.8;
+  }
+  #prev-arrow {
+    left: 10px;
+  }
+  #next-arrow {
+    right: 10px;
+  }
+  .page-arrow:hover {
+    opacity: 1;
+  }
+  
